@@ -1,0 +1,17 @@
+{
+  "name": "jainsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pottan.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nanoid": "^5.1.6",
+    "socket.io": "^4.8.1"
+  }
+}
