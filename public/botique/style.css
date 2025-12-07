@@ -1,0 +1,136 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.4s ease-in-out;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --card: #f2f2f2;
+    --accent: #6b5bff;
+}
+
+body.dark {
+    --bg: #0f0f0f;
+    --text: #fff;
+    --card: #1a1a1a;
+    --accent: #8f7cff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.theme-btn {
+    background: var(--accent);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    color: white;
+}
+
+/* PAGE FADE */
+.page-fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.page-fade.loaded {
+    opacity: 1;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.product-item {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.product-images {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.product-images img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-item .features {
+    text-align: left;
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.product-item .features li {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.product-item .price {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background: var(--card);
+}
