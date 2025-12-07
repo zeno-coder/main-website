@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Team</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prevent Flash -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem("site-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved ? saved : (prefersDark ? "dark" : "light");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+</head>
+
+<body class="page-fade">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">DevTeam</h1>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="title">We Build Websites for Shops & Businesses</h2>
+        <p class="subtitle">Textiles, Garages, Salons, Restaurants & More.</p>
+
+        <!-- Single Contact Button -->
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+	
+
+    </section>
+
+    <!-- What We Offer -->
+    <section class="services">
+        <h2 class="section-title">What We Provide</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Business Websites</h3>
+                <p>Modern responsive websites for any shop or business.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fast Delivery</h3>
+                <p>Your site goes live within hours after confirmation.</p>
+            </div>
+
+            <div class="card">
+                <h3>Custom Designs</h3>
+                <p>Fully customized UI, animations & branding.</p>
+            </div>
+
+            <div class="card">
+                <h3>Affordable Pricing</h3>
+                <p>Best rates for students and small businesses.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- OUR TEMPLATES -->
+<section class="templates">
+    <h2 class="section-title">OUR TEMPLATES</h2>
+
+    <div class="templates-cards">
+        <div class="card">
+            <h3>BOUTIQUE</h3>
+            <p>Check out our ready-made boutique template with stylish product listings.</p>
+            <a href="/boutique" class="contact-btn">View Boutique</a>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact for any support from the developer side.</p>
+        <p>Extra features and customization available — just contact.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Fade-in -->
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
+
+    <!-- Fade-out on internal navigation -->
+    <script>
+    document.querySelectorAll("a[href]").forEach(link => {
+      const url = link.getAttribute("href");
+
+      if (!url) return;
+      if (url.startsWith("#")) return;
+      if (url.startsWith("mailto:")) return;
+      if (url.startsWith("tel:")) return;
+      if (link.target === "_blank") return;
+
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.body.classList.remove("loaded");
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300);
+      });
+    });
+    </script>
+
+<script>
+window.addEventListener("pageshow", (event) => {
+  // If page is restored from bfcache, force fade-in
+  if (event.persisted) {
+    document.body.classList.add("loaded");
+  }
+});
+</script>
+
+</body>
+</html>
