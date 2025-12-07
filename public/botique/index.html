@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Collection</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prevent white flash on theme load -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem("site-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved ? saved : (prefersDark ? "dark" : "light");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+</head>
+<body class="page-fade">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">Boutique Collection</h1>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2 class="section-title">Our Collection</h2>
+
+        <div class="product-list">
+
+    <!-- Product 1 -->
+    <div class="product-item">
+        <div class="product-images">
+            <img src="https://files.catbox.moe/uv0ucz.jpg" alt="Elegant Evening Dress 1">
+            <img src="https://files.catbox.moe/wt1f05.jpg" alt="Elegant Evening Dress 2">
+            <img src="https://files.catbox.moe/eme3cq.jpg" alt="Elegant Evening Dress 3">
+        </div>
+        <h3>Elegant Evening Dress</h3>
+        <ul class="features">
+            <li>Material: Silk Blend</li>
+            <li>Color: Light Pink</li>
+            <li>Sizes: S, M, L</li>
+            <li>Pattern: Embroidered Floral</li>
+        </ul>
+        <p class="price">₹3,000</p>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-item">
+        <div class="product-images">
+            <img src="https://files.catbox.moe/miqhim.jpg" alt="Casual Cotton Top 1">
+            <img src="https://files.catbox.moe/fjoba1.jpg" alt="Casual Cotton Top 2">
+            <img src="https://files.catbox.moe/ng4d9l.jpg" alt="Casual Cotton Top 3">
+        </div>
+        <h3>Casual Cotton Top</h3>
+        <ul class="features">
+            <li>Material: 100% Cotton</li>
+            <li>Color: Sky Blue & Pale Yellow</li>
+            <li>Sizes: S, M, L, XL</li>
+            <li>Pattern: Minimalist Stripes</li>
+        </ul>
+        <p class="price">₹2,898</p>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-item">
+        <div class="product-images">
+            <img src="https://files.catbox.moe/9ekkge.jpg" alt="Stylish Churidar 1">
+            <img src="https://files.catbox.moe/7xee26.jpg" alt="Stylish Churidar 2">
+        </div>
+        <h3>Stylish Churidar</h3>
+        <ul class="features">
+            <li>Material: Premium Fabric</li>
+            <li>Color: Cream & Orange</li>
+            <li>Pattern: Minimal Elegant</li>
+        </ul>
+        <p class="price">₹2,499</p>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-item">
+        <div class="product-images">
+            <img src="https://files.catbox.moe/cb45mh.jpg" alt="Trendy Kurti 1">
+            <img src="https://files.catbox.moe/p8df0w.jpg" alt="Trendy Kurti 2">
+	    <img src="https://files.catbox.moe/n2fxw4.jpg" alt="Trendy Kurti 3">	 
+        </div>
+        <h3>Trendy Kurti</h3>
+        <ul class="features">
+            <li>Material: Rayon</li>
+            <li>Color: Navy Blue</li>
+            <li>Sizes: M, L, XL</li>
+            <li>Pattern: Floral Print</li>
+        </ul>
+        <p class="price">₹1,899</p>
+    </div>
+
+
+
+<!-- Product 5 -->
+    <div class="product-item">
+        <div class="product-images">
+            <img src="https://files.catbox.moe/tnoqn7.jpg" alt="Trendy Kurti 1">
+            <img src="https://files.catbox.moe/tnoqn7.jpg" alt="Trendy Kurti 2">
+	    <img src="https://files.catbox.moe/a9kdgz.jpg" alt="Trendy Kurti 3">	 
+        </div>
+        <h3>Stylish Outfit </h3>
+        <ul class="features">
+            <li>Material: Cotton</li>
+            <li>Color: Red & Blue</li>
+            <li>Sizes: M, L, XL</li>
+            <li>Pattern: Scratched</li>
+        </ul>
+        <p class="price">₹1,599</p>
+    </div>
+
+</div>
+
+
+    </section>
+
+<!-- Contact Button -->
+<div style="text-align:center; margin:30px 0;">
+    <a href="/contact.html" class="contact-btn">Contact Us</a>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us for more collections and custom orders.</p>
+    </footer>
+
+    <!-- Theme & page fade script -->
+    <script src="script.js"></script>
+
+
+    <script>
+        // Page fade in effect
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+
+        // Smooth page transition for links
+        document.querySelectorAll("a").forEach(link => {
+          const url = link.getAttribute("href");
+          if (!url || url.startsWith("#")) return;
+          link.addEventListener("click", e => {
+              e.preventDefault();
+              document.body.classList.remove("loaded");
+              setTimeout(() => {
+                  window.location.href = url;
+              }, 300);
+          });
+        });
+    </script>
+
+</body>
+</html>
