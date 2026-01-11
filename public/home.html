@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aura Boutique - Exclusive ethnic wear and contemporary fashion. Discover elegance in every stitch.">
+    <meta name="theme-color" content="#FFD700">
+    <title>Aura | Boutique Homepage</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <script defer src="home.js"></script>
+</head>
+
+<body>
+    <header class="site-header" id="navbar">
+        <div class="container header-inner">
+            <a href="#" class="logo">AURA</a>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" aria-label="Cart">🛒</button>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#collections" class="mobile-link">Collections</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <img src="https://files.catbox.moe/k7uskd.jpg" alt="Elegant traditional wear" class="hero-image">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero-content fade-in-up">
+                <span class="subtitle">New Season 2025</span>
+                <h1>Timeless Elegance &<br>Modern Grace</h1>
+                <p>Curated collections for the contemporary soul.</p>
+                <div class="hero-buttons">
+                    <a href="boutique/index.html" class="btn btn-primary">View Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collections Section -->
+        <section id="collections" class="section collections">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="accent-text">Our Selections</span>
+                    <h2>Curated Collections</h2>
+                    <div class="separator"></div>
+                </div>
+
+                <div class="collection-grid">
+                    <article class="product-card fade-on-scroll">
+                        <div class="card-image">
+                            <div class="placeholder-img"
+                                style="background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">
+                            </div>
+                            <span class="tag">New</span>
+                        </div>
+                        <div class="card-details">
+                            <h3>Silk Heritage Saree</h3>
+                            <p class="category">Bridal</p>
+                            <div class="price">$450.00</div>
+                        </div>
+                    </article>
+
+                    <article class="product-card fade-on-scroll delay-100">
+                        <div class="card-image">
+                            <div class="placeholder-img"
+                                style="background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);"></div>
+                        </div>
+                        <div class="card-details">
+                            <h3>Royal Banarasi</h3>
+                            <p class="category">Festive</p>
+                            <div class="price">$380.00</div>
+                        </div>
+                    </article>
+
+                    <article class="product-card fade-on-scroll delay-200">
+                        <div class="card-image">
+                            <div class="placeholder-img"
+                                style="background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);"></div>
+                            <span class="tag sale">Sale</span>
+                        </div>
+                        <div class="card-details">
+                            <h3>Contemporary Lehnga</h3>
+                            <p class="category">Wedding</p>
+                            <div class="price"><span class="old-price">$700</span> $550.00</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container about-grid">
+                <div class="about-content fade-on-scroll">
+                    <span class="accent-text">Our Story</span>
+                    <h2>Weave of Tradition</h2>
+                    <p>At Aura, we believe fashion is an expression of heritage. Born from a passion for handcrafted
+                        textiles, we bring you garments that tell a story. Every thread is woven with precision, every
+                        color picked to celebrate life.</p>
+                    <p>Our artisans dedicate hours to perfect the intricate embroidery that adorns our collections,
+                        ensuring you wear not just a dress, but a masterpiece.</p>
+                    <a href="boutique/index.html" class="btn btn-outline">Visit Boutique</a>
+                </div>
+                <div class="about-image fade-on-scroll delay-100">
+                    <div class="image-frame">
+                        <div class="placeholder-img" style="background-color: #fceabb;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features section-sm">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon">✨</div>
+                        <h4>Premium Quality</h4>
+                        <p>Handpicked fabrics and authentic craftsmanship.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🚚</div>
+                        <h4>Worldwide Shipping</h4>
+                        <p>Bringing elegance to your doorstep, anywhere.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">💬</div>
+                        <h4>Personal Styling</h4>
+                        <p>Expert advice to help you find your perfect fit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info fade-on-scroll">
+                        <h2>Visit Our Boutique</h2>
+                        <p>Experience the collections in person.</p>
+                        <address>
+                            123 Fashion Avenue,<br>
+                            Design District, NY 10012<br>
+                            <a href="tel:+1234567890">+1 (555) 123-4567</a><br>
+                            <a href="mailto:hello@aura.com">hello@aura.com</a>
+                        </address>
+                    </div>
+                    <div class="newsletter fade-on-scroll delay-100">
+                        <h3>Join the List</h3>
+                        <p>Be the first to know about new arrivals and exclusive events.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault();">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-sm">AURA</span>
+                    <p>&copy; 2025 Aura Boutique. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

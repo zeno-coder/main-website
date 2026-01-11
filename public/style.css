@@ -1,0 +1,406 @@
+/* ==============================
+   PREMIUM UI/CSS UPGRADE
+   ============================== */
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.4s ease-in-out;
+    min-width: 320px;
+}
+
+/* COLOR VARIABLES */
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --card: #f8f8f8;
+    --accent: #6b5bff;
+    --accent-hover: #8f7cff;
+    --shadow: rgba(0,0,0,0.08);
+}
+
+html.dark {
+    --bg: #0f0f0f;
+    --text: #fff;
+    --card: #1a1a1a;
+    --accent: #8f7cff;
+    --accent-hover: #6b5bff;
+    --shadow: rgba(0,0,0,0.2);
+}
+/* HERO SECTION TEXT COLOR FOR THEMES */
+.hero .title,
+.hero .subtitle {
+    color: var(--text); 
+    transition: color 0.4s ease;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    position: relative;
+    background: var(--bg);
+    box-shadow: 0 2px 12px var(--shadow);
+    border-radius: 12px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(45deg, var(--accent), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: var(--accent);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px var(--shadow);
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.2s ease;
+    border-radius: 18px;
+    transition: background 0.4s ease;
+    background: linear-gradient(135deg, #f9f9ff, #e9e9ff); /* light mode default */
+}
+
+html.dark .hero {
+    background: linear-gradient(135deg, #111111, #1a1a1a); /* dark mode gradient */
+}
+
+/* HERO TEXT */
+.hero .title {
+    animation: heroSlideUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero .subtitle {
+    animation: heroSlideUp 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes heroSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.title {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 18px;    
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(107,91,255,0.35);
+}
+
+/* SERVICES SECTION */
+.services {
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    animation: slideUp 1s ease;
+    letter-spacing: 0.5px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(107,91,255,0.2);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* TEMPLATES */
+.templates {
+    padding: 50px 20px;
+}
+
+.templates-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.templates-cards .card .contact-btn {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 25px 20px;
+    background: var(--card);
+    border-radius: 12px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.7);
+}
+
+/* CONTACT PAGE */
+.contact-section {
+    background: linear-gradient(145deg, #f3f3ff, #eaeaff);
+    border-radius: 20px;
+    padding: 50px 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    margin: 40px auto;
+    max-width: 600px;
+    transition: background 0.4s ease;
+}
+html.dark .contact-section {
+    background: linear-gradient(145deg, #1a1a1a, #222222);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+
+.contact-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Gradient buttons with hover + shadow */
+.contact-btn2 {
+    background: linear-gradient(135deg, #6b5bff, #8f7cff);
+    color: white;
+    border-radius: 14px;
+    font-size: 20px;
+    padding: 18px 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+    display: block;
+    text-align: center;
+}
+
+/* Hover effect */
+.contact-btn2:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(107,91,255,0.35);
+    background: linear-gradient(135deg, #8f7cff, #6b5bff);
+}
+
+/* Optional: pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Apply pulse to a class you want */
+.contact-btn2.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+
+.contact-btn2:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(107,91,255,0.35);
+     text-decoration: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* PAGE FADE ANIMATION */
+.page-fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.page-fade.loaded {
+  opacity: 1;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE FIXES
+   ============================== */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 15px 40px 15px;
+    }
+
+    .hero .title {
+        font-size: 28px;
+    }
+
+    .hero .subtitle {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+
+    .templates-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .templates-cards .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* CONTACT BUTTONS */
+    .contact-buttons {
+        width: 100%;         /* container stretches full width */
+        max-width: 400px;    /* optional: limit for large phones */
+        margin: 0 auto;      /* center container */
+        padding: 0 15px;     /* small padding */
+    }
+
+    .contact-btn {
+        width: 90%;
+        max-width: 300px;
+        margin: 15px auto 0 auto;
+    }
+
+    .contact-btn2 {
+        width: 100%;         /* full width of container */
+        max-width: 100%;     
+        padding: 16px 20px;
+        font-size: 18px;
+        margin: 12px 0;      /* spacing between buttons */
+    }
+
+    .theme-btn {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 60px 10px 30px 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .contact-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .contact-buttons {
+        padding: 0 10px; /* extra padding for tiny screens */
+    }
+
+    .contact-btn2 {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+}
+
