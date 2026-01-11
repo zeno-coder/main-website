@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenoX Garage | Vehicle Modifications</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prevent theme flash -->
+    <script>
+      (function () {
+        const saved = localStorage.getItem("site-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved ? saved : (prefersDark ? "dark" : "light");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+</head>
+
+<body class="page-fade">
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h1 class="logo">ZenoX Garage</h1>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h2 class="title">Vehicle Modification & Custom Builds</h2>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="services" class="services">
+  <div class="services-head">
+  <span class="badge">GARAGE MOD ZONE</span>
+  <h3>Performance • Parts • Precision</h3>
+  <p>
+    Professional vehicle modification services with premium spare parts,
+    transparent pricing, and expert workmanship.
+  </p>
+</div>
+
+
+  <div class="service-grid">
+
+    <div class="service-box">
+      <h4>⚙️ Performance Tuning</h4>
+      <ul>
+        <li>ECU Remap — <span>₹15,000</span></li>
+        <li>Air Intake Upgrade — <span>₹6,500</span></li>
+        <li>Performance Exhaust — <span>₹22,000</span></li>
+        <li>Turbo Upgrade — <span>₹45,000+</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box">
+      <h4>🛠️ Body & Exterior Mods</h4>
+      <ul>
+        <li>Full Body Kit — <span>₹30,000</span></li>
+        <li>Carbon Fiber Spoiler — <span>₹12,000</span></li>
+        <li>Vinyl Wrap — <span>₹18,000</span></li>
+        <li>Paint Protection Film — <span>₹10,000</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box">
+      <h4>🛞 Wheels & Suspension</h4>
+      <ul>
+        <li>Alloy Wheels (Set) — <span>₹28,000</span></li>
+        <li>Performance Tyres — <span>₹24,000</span></li>
+        <li>Lowering Springs — <span>₹14,000</span></li>
+        <li>Coilover Suspension — <span>₹35,000</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box">
+      <h4>💡 Interior & Lighting</h4>
+      <ul>
+        <li>Ambient Lighting — <span>₹4,500</span></li>
+        <li>Custom Steering — <span>₹9,000</span></li>
+        <li>Digital Cluster — <span>₹16,000</span></li>
+        <li>Sound System Upgrade — <span>₹20,000</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- BIKE MODIFICATIONS -->
+<section class="services bike-section">
+
+
+<!-- BIKE HERO IMAGE / INTRO -->
+<section class="bike-hero">
+  <div class="services-head">
+    <span class="badge">BIKE MOD LAB</span>
+    <h3>Two Wheels • Raw Power • Style</h3>
+    <p>
+      Custom bike modifications, performance tuning, visual upgrades,
+      and premium spare parts for street & sport bikes.
+    </p>
+  </div>
+</section>
+
+<!-- BIKE SERVICE CARDS BELOW IMAGE -->
+<section class="services bike-section">
+  <div class="service-grid">
+
+    <div class="service-box bike">
+      <h4>🏍 Engine & Performance</h4>
+      <ul>
+        <li>ECU Flash — <span>₹6,000</span></li>
+        <li>Free Flow Exhaust — <span>₹9,500</span></li>
+        <li>High-Flow Air Filter — <span>₹2,200</span></li>
+        <li>Quick Shifter — <span>₹12,000</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box bike">
+      <h4>🛞 Wheels & Handling</h4>
+      <ul>
+        <li>Radial Tyres (Set) — <span>₹7,800</span></li>
+        <li>Upside-Down Forks — <span>₹18,000</span></li>
+        <li>Rear Mono Shock — <span>₹14,500</span></li>
+        <li>Steering Damper — <span>₹6,000</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box bike">
+      <h4>🎨 Styling & Body Mods</h4>
+      <ul>
+        <li>Tank Wrap — <span>₹3,500</span></li>
+        <li>Custom Fairing Kit — <span>₹11,000</span></li>
+        <li>LED Headlamp Setup — <span>₹4,000</span></li>
+        <li>Tail Tidy Kit — <span>₹2,800</span></li>
+      </ul>
+    </div>
+
+    <div class="service-box bike">
+      <h4>🔧 Controls & Accessories</h4>
+      <ul>
+        <li>Adjustable Levers — <span>₹2,400</span></li>
+        <li>Handlebar Upgrade — <span>₹3,200</span></li>
+        <li>Frame Sliders — <span>₹1,800</span></li>
+        <li>Mobile Mount + USB — <span>₹1,200</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 ZenoX Garage</p>
+    <p>Vehicle Modification & Custom Builds</p>
+    <p>The webpage which youre viewing now is just only for reference the complete ui customization is available</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Page fade-in -->
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+</body>
+</html>

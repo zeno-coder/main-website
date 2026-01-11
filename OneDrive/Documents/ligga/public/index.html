@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Team</title>
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +23,7 @@
 
     <!-- Navbar -->
     <header class="navbar">
-        <h1 class="logo">DevTeam</h1>
+        <h1 class="logo">ZenoX</h1>
         <button id="themeToggle" class="theme-btn">🌙</button>
     </header>
 
@@ -70,14 +70,39 @@
     <h2 class="section-title">OUR TEMPLATES</h2>
 
     <div class="templates-cards">
+
+        <!-- TEMPLATE 1 -->
         <div class="card">
             <h3>BOUTIQUE</h3>
             <p>Check out our ready-made boutique template with stylish product listings.</p>
-            <a href="/boutique" class="contact-btn">View Boutique</a>
-
+            <a href="home.html" class="contact-btn">View Template</a>
         </div>
+
+        <!-- TEMPLATE 2 (NEW) -->
+        <div class="card">
+            <h3>BEAUTY PARLOUR</h3>
+            <p>Elegant beauty parlour template with service list, price chart & booking options.</p>
+            <a href="beauty.html" class="contact-btn">View Template</a>
+        </div>
+	<!-- TEMPLATE 3 (GARAGE) -->
+<div class="card">
+    <h3>GARAGE</h3>
+    <p>
+        Professional garage template with service details, vehicle repair info,
+        contact section & working hours.
+    </p>
+    <a href="garage.html" class="contact-btn">View Template</a>
+</div>
+<!----Template 4 (Gym)-->
+	<div class="card">
+	<h3>FITNESS/GYM</h3>
+	<p>TEmplate for fit and healthy with our state-of-the-art equipment and expert trainers at our top-rated gym.</p>
+	<a href="/gym" class="contact-btn">View Template</a>
+	</div>
+
     </div>
 </section>
+
 
 
 
@@ -98,7 +123,7 @@
 
     <!-- Fade-out on internal navigation -->
     <script>
-    document.querySelectorAll("a[href]").forEach(link => {
+    document.querySelectorAll("a[href]").forEach(link => 
       const url = link.getAttribute("href");
 
       if (!url) return;

@@ -47,9 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
 });
 
-document.querySelectorAll("a").forEach(link => {
+document.querySelectorAll("a:not([data-no-fade])").forEach(link => {
+
     const url = link.getAttribute("href");
-    if (!url || url.startsWith("#") || url.startsWith("http")) return;
+    if (
+  !url ||
+  url.startsWith("#") ||
+  url.startsWith("http")
+) return;
+
+
 
     link.addEventListener("click", e => {
         e.preventDefault();
@@ -66,3 +73,22 @@ window.addEventListener("storage", (e) => {
         applyTheme(newTheme);
     }
 });
+
+// ===== Admin console access =====
+window.enableAdmin = function (secret) {
+  fetch("/admin/enable", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ key: secret })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        console.log("✅ Admin mode enabled");
+        location.reload();
+      } else {
+        console.log("❌ Invalid admin key");
+      }
+    });
+};
+
