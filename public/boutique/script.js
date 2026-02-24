@@ -91,4 +91,23 @@ window.enableAdmin = function (secret) {
       }
     });
 };
+// Premium Lightbox
+document.addEventListener("DOMContentLoaded", () => {
 
+    const lightbox = document.getElementById("lightbox");
+    if (!lightbox) return;
+
+    const lightboxImg = lightbox.querySelector("img");
+
+    document.querySelectorAll(".product-images img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add("active");
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+
+});
