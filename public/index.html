@@ -1,155 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Team</title>
+    <title>ZenoX | Premium Web Development & Design</title>
+    <meta name="description"
+        content="ZenoX creates high-performance, responsive, and custom websites for businesses, shops, and e-commerce. Fast delivery, affordable rates, and excellent care.">
+    <meta name="keywords"
+        content="web development, ZenoX, custom websites, e-commerce, business websites, fast web design">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Prevent Flash -->
-    <script>
-      (function() {
-        const saved = localStorage.getItem("site-theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = saved ? saved : (prefersDark ? "dark" : "light");
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-      })();
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ZenoX",
+      "image": "",
+      "@id": "",
+      "url": "https://zenox-design.com",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "",
+        "postalCode": "",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://instagram.com/zenox",
+        "https://twitter.com/zenox",
+        "https://linkedin.com/company/zenox"
+      ],
+      "description": "ZenoX creates high-performance, responsive, and custom websites for businesses, shops, and e-commerce. Fast delivery, affordable rates, and excellent care."
+    }
     </script>
 </head>
 
-<body class="page-fade">
-
+<body>
     <!-- Navbar -->
-    <header class="navbar">
-        <h1 class="logo">ZenoX</h1>
-        <button id="themeToggle" class="theme-btn">🌙</button>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2 class="title">We Build Websites for Shops & Businesses</h2>
-        <p class="subtitle">Textiles, Garages, Salons, Restaurants & More.</p>
-
-        <!-- Single Contact Button -->
-        <a href="contact.html" class="contact-btn">Contact Us</a>
-	
-
-    </section>
-
-    <!-- What We Offer -->
-    <section class="services">
-        <h2 class="section-title">What We Provide</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Business Websites</h3>
-                <p>Modern responsive websites for any shop or business.</p>
-            </div>
-
-            <div class="card">
-                <h3>Fast Delivery</h3>
-                <p>Your site goes live within hours after confirmation.</p>
-            </div>
-
-            <div class="card">
-                <h3>Custom Designs</h3>
-                <p>Fully customized UI, animations & branding.</p>
-            </div>
-
-            <div class="card">
-                <h3>Affordable Pricing</h3>
-                <p>Best rates for students and small businesses.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ZenoX</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
             </div>
         </div>
-    </section>
+    </nav>
 
-<!-- OUR TEMPLATES -->
-<section class="templates">
-    <h2 class="section-title">OUR TEMPLATES</h2>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="zenox-title" id="zenox-animation">ZenoX</h1>
+                <p class="hero-subtitle">Crafting Digital Excellence for Your Business</p>
+                <div class="hero-scroll">
+                    <span>Explore Our World</span>
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+        </section>
 
-    <div class="templates-cards">
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Why ZenoX?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i data-lucide="zap"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Your business doesn't wait. We deliver high-quality websites in record time without compromising quality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="dollar-sign"></i>
+                        <h3>Affordable Rates</h3>
+                        <p>Premium quality doesn't have to mean premium pricing. We offer competitive packages for every business size.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="heart"></i>
+                        <h3>Excellent Care</h3>
+                        <p>Our relationship doesn't end at launch. We provide ongoing support to ensure your success.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i data-lucide="layout"></i>
+                        <h3>Fully Customizable</h3>
+                        <p>No templates here. Every design is built from the ground up to match your brand's unique identity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- TEMPLATE 1 -->
-        <div class="card">
-            <h3>BOUTIQUE</h3>
-            <p>Check out our ready-made boutique template with stylish product listings.</p>
-            <a href="home.html" class="contact-btn">View Template</a>
-        </div>
+        <!-- Templates Section -->
+        <section id="templates" class="templates">
+            <div class="container">
+                <h2 class="section-title">Industry Templates</h2>
+                <p class="section-subtitle">Get inspired by our specialized designs for various sectors.</p>
 
-        <!-- TEMPLATE 2 (NEW) -->
-        <div class="card">
-            <h3>BEAUTY SALON</h3>
-            <p>Elegant beauty salon template with service list, price chart & booking options.</p>
-            <a href="beauty.html" class="contact-btn">View Template</a>
-        </div>
-	<!-- TEMPLATE 3 (GARAGE) -->
-<div class="card">
-    <h3>GARAGE</h3>
-    <p>
-        Professional garage template with service details, vehicle repair info,
-        contact section & working hours.
-    </p>
-    <a href="garage.html" class="contact-btn">View Template</a>
-</div>
-<!----Template 4 (Gym)-->
-	<div class="card">
-	<h3>FITNESS/GYM</h3>
-	<p>Template for fit and healthy with our state-of-the-art equipment and expert trainers at our top-rated gym.</p>
-	<a href="/gym" class="contact-btn">View Template</a>
-	</div>
+                <div class="templates-grid">
+                    <!-- Boutiques -->
+                    <div class="template-item">
+                        <div class="template-img-placeholder"></div>
+                        <div class="template-info">
+                            <h3>Boutiques</h3>
+                            <p>Elegant & Fashion-forward</p>
+                            <a href="home.html" class="view-btn">View Demo <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
 
-    </div>
-</section>
+                    <!-- Beauty Parlour / Salon -->
+                    <div class="template-item">
+                        <div class="template-img-placeholder"></div>
+                        <div class="template-info">
+                            <h3>Beauty Parlour / Salon</h3>
+                            <p>Chic & Sophisticated</p>
+                            <a href="beauty.html" class="view-btn">View Demo <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
 
+                    <!-- Gym / Fitness -->
+                    <div class="template-item">
+                        <div class="template-img-placeholder"></div>
+                        <div class="template-info">
+                            <h3>Gym / Fitness</h3>
+                            <p>Energetic & Dynamic</p>
+                            <a href="/gym" class="view-btn">View Demo <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
 
+                    <!-- Garages -->
+                    <div class="template-item">
+                        <div class="template-img-placeholder"></div>
+                        <div class="template-info">
+                            <h3>Garages</h3>
+                            <p>Industrial & Robust</p>
+                            <a href="garage.html" class="view-btn">View Demo <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Our Recent Work</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="work-img-placeholder"></div>
+                        <h4>Urban Wear E-commerce</h4>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="work-img-placeholder"></div>
+                        <h4>Zenith Coffee House</h4>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="work-img-placeholder"></div>
+                        <h4>Peak Performance Gym</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Ready to start your journey?</h2>
+                    <p>Let's build something amazing together.</p>
+                    <button class="contact-btn">Contact Us Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>Contact for any support from the developer side.</p>
-        <p>Extra features and customization available — just contact.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <span class="footer-logo">ZenoX</span>
+                    <p>Elevating businesses through superior web design.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#portfolio">Our Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZenoX. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
-
-    <!-- Fade-in -->
     <script>
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
+        lucide.createIcons();
     </script>
-
-    <!-- Fade-out on internal navigation -->
-    <script>
-    document.querySelectorAll("a[href]").forEach(link => 
-      const url = link.getAttribute("href");
-
-      if (!url) return;
-      if (url.startsWith("#")) return;
-      if (url.startsWith("mailto:")) return;
-      if (url.startsWith("tel:")) return;
-      if (link.target === "_blank") return;
-
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        document.body.classList.remove("loaded");
-        setTimeout(() => {
-          window.location.href = url;
-        }, 300);
-      });
-    });
-    </script>
-
-<script>
-window.addEventListener("pageshow", (event) => {
-  // If page is restored from bfcache, force fade-in
-  if (event.persisted) {
-    document.body.classList.add("loaded");
-  }
-});
-</script>
-
 </body>
+
 </html>
