@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthyCare Clinic</title>
+  <meta name="description" content="Premium clinic template with doctor info, timings, and appointment booking.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">HealthyCare</a>
+      <ul class="nav-links">
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+      </ul>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Welcome to HealthyCare Clinic</h1>
+      <p>Professional care with experienced doctors and modern facilities.</p>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Doctors</h2>
+      <div class="doctors-grid">
+        <div class="doctor-card tilt">
+          <img src="https://via.placeholder.com/120" alt="Dr. Smith">
+          <h4>Dr. John Smith</h4>
+          <p>Cardiologist | Mon-Fri | 10am-4pm</p>
+        </div>
+        <div class="doctor-card tilt">
+          <img src="https://via.placeholder.com/120" alt="Dr. Jane Doe">
+          <h4>Dr. Jane Doe</h4>
+          <p>Dermatologist | Tue-Sat | 11am-5pm</p>
+        </div>
+        <div class="doctor-card tilt">
+          <img src="https://via.placeholder.com/120" alt="Dr. Mike Lee">
+          <h4>Dr. Mike Lee</h4>
+          <p>Pediatrician | Mon-Fri | 9am-3pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section light-section">
+    <div class="container">
+      <h2 class="section-title">Clinic Services</h2>
+      <div class="services-grid">
+        <div class="service-card tilt">
+          <h3>General Checkup</h3>
+          <p>Comprehensive health evaluations for all age groups.</p>
+        </div>
+        <div class="service-card tilt">
+          <h3>Pediatrics</h3>
+          <p>Specialized care for children and infants.</p>
+        </div>
+        <div class="service-card tilt">
+          <h3>Dermatology</h3>
+          <p>Skin health, acne treatment, and cosmetic dermatology.</p>
+        </div>
+        <div class="service-card tilt">
+          <h3>Cardiology</h3>
+          <p>Heart care, diagnostics, and advanced treatments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="section">
+    <div class="container">
+      <h2 class="section-title">Book an Appointment</h2>
+      <form id="bookingForm" class="booking-form">
+        <input type="text" id="patientName" placeholder="Full Name" required>
+        <input type="email" id="patientEmail" placeholder="Email Address" required>
+        <input type="text" id="patientPhone" placeholder="Phone Number" required>
+        <select id="doctorSelect" required>
+          <option value="">Select Doctor</option>
+          <option value="Dr. John Smith">Dr. John Smith</option>
+          <option value="Dr. Jane Doe">Dr. Jane Doe</option>
+          <option value="Dr. Mike Lee">Dr. Mike Lee</option>
+        </select>
+        <input type="date" id="appointmentDate" required>
+        <textarea id="notes" placeholder="Additional Notes"></textarea>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 HealthyCare Clinic. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>

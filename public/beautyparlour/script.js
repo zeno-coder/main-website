@@ -75,19 +75,23 @@ window.addEventListener("storage", (e) => {
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const img = document.getElementById('lightbox-img');
+
   img.src = src;
   lightbox.style.display = 'flex';
-  // optional: zoom-in effect
-  img.style.transform = 'scale(0.8)';
+
   setTimeout(() => {
-    img.style.transform = 'scale(1)';
+    lightbox.classList.add('active');
   }, 10);
 }
 
-// Close Lightbox
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
-  lightbox.style.display = 'none';
+
+  lightbox.classList.remove('active');
+
+  setTimeout(() => {
+    lightbox.style.display = 'none';
+  }, 400);
 }
 
 // Close lightbox if user clicks outside the image
