@@ -1,121 +1,776 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HealthyCare Clinic</title>
-  <meta name="description" content="Premium clinic template with doctor info, timings, and appointment booking.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Firstvision Eye Care Clinic – Expert eye testing, routine checkups, and premium eyecare services. Book your appointment today." />
+  <meta name="keywords" content="eye care, eye clinic, eye testing, routine checkup, optometry, Firstvision, vision care" />
+  <meta name="author" content="Firstvision Eye Care Clinic" />
+  <meta property="og:title" content="Firstvision Eye Care Clinic" />
+  <meta property="og:description" content="Expert eye testing, routine checkups, and premium eyecare services." />
+  <meta property="og:type" content="website" />
+  <title>Firstvision Eye Care Clinic | Your Vision, Our Priority</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Firstvision Eye Care Clinic",
+    "description": "Expert eye testing, routine checkups, and premium eyecare services.",
+    "medicalSpecialty": "Optometry",
+    "url": "https://firstvisionclinic.com",
+    "telephone": "+1-800-FIRSTVISION",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Vision Avenue",
+      "addressLocality": "Your City",
+      "addressRegion": "State",
+      "postalCode": "00000"
+    },
+    "openingHours": "Mo-Sa 08:00-18:00"
+  }
+  </script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="nav-logo">HealthyCare</a>
-      <ul class="nav-links">
-        <li><a href="#doctors">Doctors</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#booking">Book Appointment</a></li>
-      </ul>
-      <a href="#booking" class="nav-cta">Book Now</a>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Welcome to HealthyCare Clinic</h1>
-      <p>Professional care with experienced doctors and modern facilities.</p>
-    </div>
-  </section>
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Firstvision Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="20" cy="14" rx="19" ry="13" stroke="#FF6B00" stroke-width="2.5"/>
+            <circle cx="20" cy="14" r="6" fill="#FF6B00"/>
+            <circle cx="20" cy="14" r="3" fill="#fff"/>
+            <circle cx="22" cy="12" r="1" fill="#FF6B00"/>
+          </svg>
+        </div>
+        <span class="logo-text">First<span class="logo-accent">Vision</span></span>
+      </a>
 
-  <!-- Doctors Section -->
-  <section id="doctors" class="section">
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#eye-testing" class="nav-link">Eye Testing</a>
+        <a href="#checkups" class="nav-link">Checkups</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#register" class="btn btn-primary nav-cta" aria-label="Book an appointment">Book Appointment</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#eye-testing" class="mobile-link">Eye Testing</a>
+      <a href="#checkups" class="mobile-link">Checkups</a>
+      <a href="#why-us" class="mobile-link">Why Us</a>
+      <a href="#testimonials" class="mobile-link">Reviews</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#register" class="btn btn-primary mobile-cta">Book Appointment</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <!-- Eye SVG illustration -->
+        <div class="hero-eye-wrap" aria-hidden="true">
+          <svg class="hero-eye-svg" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="150" cy="100" rx="148" ry="98" stroke="rgba(255,107,0,0.3)" stroke-width="2"/>
+            <ellipse cx="150" cy="100" rx="120" ry="75" stroke="rgba(255,107,0,0.2)" stroke-width="1.5"/>
+            <circle cx="150" cy="100" r="55" fill="rgba(255,107,0,0.15)" stroke="rgba(255,107,0,0.5)" stroke-width="2"/>
+            <circle cx="150" cy="100" r="30" fill="rgba(255,107,0,0.25)" stroke="rgba(255,107,0,0.6)" stroke-width="2.5"/>
+            <circle cx="150" cy="100" r="12" fill="#FF6B00" opacity="0.8"/>
+            <circle cx="156" cy="93" r="5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-content container">
+        <div class="hero-badge" aria-label="Trusted eye care">
+          <span class="badge-dot"></span>
+          Trusted Eye Care Since 2005
+        </div>
+        <h1 class="hero-title">
+          See the World<br />
+          <span class="hero-accent">Clearly.</span>
+        </h1>
+        <p class="hero-subtitle">
+          At <strong>Firstvision</strong>, we combine advanced technology with compassionate care to protect and enhance your vision. Because your eyes deserve the very best.
+        </p>
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary btn-lg">Book Appointment</a>
+          <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="20000">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Patients Served</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="18">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+            <span class="stat-label">Patient Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero-scroll" aria-label="Scroll to about section">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-card-main">
+              <div class="about-icon-wrap">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="30" fill="rgba(255,107,0,0.1)" stroke="#FF6B00" stroke-width="2"/>
+                  <path d="M12 32 C18 18, 46 18, 52 32 C46 46, 18 46, 12 32 Z" fill="rgba(255,107,0,0.15)" stroke="#FF6B00" stroke-width="2"/>
+                  <circle cx="32" cy="32" r="10" fill="#FF6B00" opacity="0.8"/>
+                  <circle cx="32" cy="32" r="5" fill="white"/>
+                  <circle cx="34" cy="30" r="2" fill="#FF6B00"/>
+                </svg>
+              </div>
+              <div class="about-card-text">
+                <h3>20,000+ Happy Patients</h3>
+                <p>Trusted by families across the region</p>
+              </div>
+            </div>
+            <div class="about-card-secondary">
+              <div class="about-pulse" aria-hidden="true"></div>
+              <p>⭐ 4.9/5 Average Rating</p>
+            </div>
+            <div class="about-decoration decoration-circle" aria-hidden="true"></div>
+          </div>
+          <div class="about-content">
+            <div class="section-tag">About Firstvision</div>
+            <h2 class="section-title" id="about-heading">A Legacy of <span class="accent">Clear Vision</span></h2>
+            <p class="section-text">Founded in 2005, Firstvision Eye Care Clinic has been at the forefront of optometric care, combining state-of-the-art diagnostic technology with personalised treatment plans tailored to every patient's unique needs.</p>
+            <p class="section-text">Our team of certified optometrists and ophthalmologists are dedicated to delivering compassionate, comprehensive eye care for patients of all ages — from paediatric screenings to complex vision corrections.</p>
+            <ul class="about-list" role="list">
+              <li><span class="check-icon" aria-hidden="true">✓</span> Board-certified optometrists &amp; ophthalmologists</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span> Latest diagnostic equipment</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span> Personalised care plans</li>
+              <li><span class="check-icon" aria-hidden="true">✓</span> Affordable pricing &amp; insurance accepted</li>
+            </ul>
+            <a href="#services" class="btn btn-primary mt-2">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services section section-alt" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">What We Offer</div>
+          <h2 class="section-title" id="services-heading">Comprehensive <span class="accent">Eye Care Services</span></h2>
+          <p class="section-subtitle">From routine checkups to advanced diagnostics — we cover every aspect of your visual health.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service Cards -->
+          <article class="service-card" aria-label="Eye Testing service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <path d="M8 24 C14 12, 34 12, 40 24 C34 36, 14 36, 8 24 Z" stroke="#FF6B00" stroke-width="2.5" fill="none"/>
+                <circle cx="24" cy="24" r="7" stroke="#FF6B00" stroke-width="2.5"/>
+                <circle cx="24" cy="24" r="3" fill="#FF6B00"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Eye Testing</h3>
+            <p class="service-desc">Comprehensive visual acuity and refraction tests using state-of-the-art autorefractors and slit-lamp biomicroscopy.</p>
+            <a href="#eye-testing" class="service-link">Learn more →</a>
+          </article>
+
+          <article class="service-card" aria-label="Routine Checkups service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <rect x="14" y="10" width="20" height="28" rx="4" stroke="#FF6B00" stroke-width="2.5"/>
+                <line x1="19" y1="18" x2="29" y2="18" stroke="#FF6B00" stroke-width="2"/>
+                <line x1="19" y1="23" x2="29" y2="23" stroke="#FF6B00" stroke-width="2"/>
+                <path d="M19 28 l3 3 5-5" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Routine Checkups</h3>
+            <p class="service-desc">Annual and bi-annual eye health examinations to detect early signs of glaucoma, cataracts, macular degeneration, and more.</p>
+            <a href="#checkups" class="service-link">Learn more →</a>
+          </article>
+
+          <article class="service-card" aria-label="Eyewear & Prescriptions service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <circle cx="16" cy="26" r="7" stroke="#FF6B00" stroke-width="2.5"/>
+                <circle cx="32" cy="26" r="7" stroke="#FF6B00" stroke-width="2.5"/>
+                <line x1="23" y1="26" x2="25" y2="26" stroke="#FF6B00" stroke-width="2"/>
+                <line x1="9" y1="22" x2="6" y2="19" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+                <line x1="39" y1="22" x2="42" y2="19" stroke="#FF6B00" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Eyewear & Prescriptions</h3>
+            <p class="service-desc">Premium prescription glasses, contact lenses, and sunglasses from leading brands with same-day lens fitting available.</p>
+            <a href="#register" class="service-link">Book now →</a>
+          </article>
+
+          <article class="service-card" aria-label="Paediatric Eye Care service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <circle cx="24" cy="18" r="7" stroke="#FF6B00" stroke-width="2.5"/>
+                <path d="M12 38 C12 30, 36 30, 36 38" stroke="#FF6B00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M20 14 l2 2 4-4" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Paediatric Eye Care</h3>
+            <p class="service-desc">Specialised vision screenings for children from infancy through adolescence to ensure healthy visual development.</p>
+            <a href="#register" class="service-link">Book now →</a>
+          </article>
+
+          <article class="service-card" aria-label="Contact Lens Fitting service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <circle cx="24" cy="24" r="13" stroke="#FF6B00" stroke-width="2.5"/>
+                <circle cx="24" cy="24" r="6" stroke="#FF6B00" stroke-width="2"/>
+                <circle cx="24" cy="24" r="2" fill="#FF6B00"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Contact Lens Fitting</h3>
+            <p class="service-desc">Expert fitting for daily, bi-weekly, monthly, and speciality lenses including toric and multifocal options.</p>
+            <a href="#register" class="service-link">Book now →</a>
+          </article>
+
+          <article class="service-card" aria-label="Diabetic Eye Screening service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="14" fill="rgba(255,107,0,0.12)"/>
+                <path d="M24 10 L28 20 L38 20 L30 27 L33 38 L24 31 L15 38 L18 27 L10 20 L20 20 Z" stroke="#FF6B00" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Diabetic Eye Screening</h3>
+            <p class="service-desc">Specialised retinal photography and OCT scanning to monitor and manage diabetic retinopathy and related conditions.</p>
+            <a href="#register" class="service-link">Book now →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EYE TESTING ===================== -->
+    <section class="eye-testing section" id="eye-testing" aria-labelledby="eye-testing-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Advanced Diagnostics</div>
+          <h2 class="section-title" id="eye-testing-heading">What to Expect During Your <span class="accent">Eye Test</span></h2>
+          <p class="section-subtitle">Our comprehensive eye examination takes 45–60 minutes and covers every aspect of your vision and eye health.</p>
+        </div>
+        <div class="testing-steps">
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3>Visual Acuity Test</h3>
+              <p>We measure how clearly you see at various distances using standard letter charts and digital projectors. This forms the baseline for your prescription.</p>
+            </div>
+          </div>
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3>Refraction Assessment</h3>
+              <p>Using a phoropter or autorefractor, we determine the exact lens prescription needed to correct nearsightedness, farsightedness, or astigmatism.</p>
+            </div>
+          </div>
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3>Eye Pressure (Tonometry)</h3>
+              <p>A painless air-puff or contact tonometry test measures intraocular pressure — a key indicator for glaucoma risk.</p>
+            </div>
+          </div>
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <h3>Retinal Examination</h3>
+              <p>Digital fundus photography and OCT scanning give us a detailed view of your retina, optic nerve, and blood vessels to detect early pathology.</p>
+            </div>
+          </div>
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">05</div>
+            <div class="step-content">
+              <h3>Colour Vision &amp; Depth Perception</h3>
+              <p>Ishihara colour plates and stereopsis tests assess colour deficiency and binocular vision function.</p>
+            </div>
+          </div>
+          <div class="step-item" role="listitem">
+            <div class="step-number" aria-hidden="true">06</div>
+            <div class="step-content">
+              <h3>Report &amp; Prescription</h3>
+              <p>We review all findings with you, provide a written report, prescribe corrective lenses if needed, and plan any follow-up care.</p>
+            </div>
+          </div>
+        </div>
+        <div class="testing-cta">
+          <p>Ready to get your eyes tested?</p>
+          <a href="#register" class="btn btn-primary btn-lg">Schedule My Eye Test</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROUTINE CHECKUPS ===================== -->
+    <section class="checkups section section-alt" id="checkups" aria-labelledby="checkups-heading">
+      <div class="container">
+        <div class="checkups-grid">
+          <div class="checkups-content">
+            <div class="section-tag">Preventive Care</div>
+            <h2 class="section-title" id="checkups-heading">Why Regular <span class="accent">Eye Checkups</span> Matter</h2>
+            <p class="section-text">Many serious eye conditions — glaucoma, diabetic retinopathy, macular degeneration — have no symptoms in their early stages. Routine checkups are your first line of defence.</p>
+            <div class="checkups-schedule" role="list" aria-label="Recommended checkup schedule">
+              <div class="schedule-item" role="listitem">
+                <div class="schedule-age">0–5 yrs</div>
+                <div class="schedule-info">
+                  <strong>Infant &amp; Toddler Screening</strong>
+                  <span>At 6 months, 3 years, and before starting school</span>
+                </div>
+              </div>
+              <div class="schedule-item" role="listitem">
+                <div class="schedule-age">6–18 yrs</div>
+                <div class="schedule-info">
+                  <strong>School-Age Children</strong>
+                  <span>Every 1–2 years or as recommended</span>
+                </div>
+              </div>
+              <div class="schedule-item" role="listitem">
+                <div class="schedule-age">19–40 yrs</div>
+                <div class="schedule-info">
+                  <strong>Adults (Low Risk)</strong>
+                  <span>Every 2 years; annually if wearing correction</span>
+                </div>
+              </div>
+              <div class="schedule-item" role="listitem">
+                <div class="schedule-age">41–60 yrs</div>
+                <div class="schedule-info">
+                  <strong>Middle-Aged Adults</strong>
+                  <span>Annually — presbyopia and glaucoma screening</span>
+                </div>
+              </div>
+              <div class="schedule-item" role="listitem">
+                <div class="schedule-age">61+ yrs</div>
+                <div class="schedule-info">
+                  <strong>Seniors</strong>
+                  <span>Every 6–12 months for comprehensive eye health monitoring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkups-visual" aria-hidden="true">
+            <div class="checkup-card">
+              <div class="checkup-card-icon">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="28" fill="rgba(255,107,0,0.1)" stroke="#FF6B00" stroke-width="2"/>
+                  <path d="M18 30 C22 20, 38 20, 42 30 C38 40, 22 40, 18 30 Z" fill="rgba(255,107,0,0.2)" stroke="#FF6B00" stroke-width="2"/>
+                  <circle cx="30" cy="30" r="8" fill="#FF6B00" opacity="0.7"/>
+                  <circle cx="30" cy="30" r="4" fill="white"/>
+                </svg>
+              </div>
+              <h3>Prevention First</h3>
+              <p>Early detection saves sight. 80% of vision loss is avoidable with timely care.</p>
+            </div>
+            <div class="checkup-features">
+              <div class="feature-pill">✓ No referral needed</div>
+              <div class="feature-pill">✓ Same-day results</div>
+              <div class="feature-pill">✓ All ages welcome</div>
+              <div class="feature-pill">✓ Insurance accepted</div>
+              <div class="feature-pill">✓ Digital reports</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="why-us section" id="why-us" aria-labelledby="why-us-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Why Firstvision</div>
+          <h2 class="section-title" id="why-us-heading">What Sets Us <span class="accent">Apart</span></h2>
+          <p class="section-subtitle">We are more than an eye clinic. We are your lifelong vision care partners.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🔬</div>
+            <h3>Advanced Technology</h3>
+            <p>OCT scanners, digital autorefractors, fundus cameras, and corneal topographers — we invest in the best so you get the best.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">👁️</div>
+            <h3>Expert Specialists</h3>
+            <p>All our optometrists hold postgraduate qualifications and participate in ongoing professional development.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">⏱️</div>
+            <h3>Same-Day Service</h3>
+            <p>Urgent appointments available. Most prescriptions and basic eyewear are ready the same day.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">💳</div>
+            <h3>Flexible Pricing</h3>
+            <p>Transparent pricing, insurance billing support, and flexible payment plans so cost never stands between you and good vision.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🏥</div>
+            <h3>Holistic Approach</h3>
+            <p>We treat the whole patient — linking systemic health conditions like diabetes and hypertension to your eye health outcomes.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">📱</div>
+            <h3>Digital Health Records</h3>
+            <p>Secure online portal lets you access your prescriptions, test results, and appointment history anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS BANNER ===================== -->
+    <section class="stats-banner" aria-label="Clinic statistics">
+      <div class="container stats-grid">
+        <div class="stats-item">
+          <span class="stats-num" data-target="20000">0</span><span class="stats-suf">+</span>
+          <span class="stats-lbl">Patients Treated</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-num" data-target="18">0</span><span class="stats-suf">+</span>
+          <span class="stats-lbl">Years of Excellence</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-num" data-target="12">0</span><span class="stats-suf"></span>
+          <span class="stats-lbl">Specialist Doctors</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-num" data-target="98">0</span><span class="stats-suf">%</span>
+          <span class="stats-lbl">Satisfaction Rate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Patient Reviews</div>
+          <h2 class="section-title" id="testimonials-heading">What Our <span class="accent">Patients Say</span></h2>
+        </div>
+        <div class="testimonials-slider" role="list">
+          <article class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"Firstvision found early-stage glaucoma during a routine checkup. The team was incredibly thorough and caring. I can't thank them enough — they saved my sight."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">M</div>
+              <div>
+                <strong>Margaret O. </strong>
+                <span>Retired Teacher, Age 62</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"I brought my 7-year-old for a school vision screening and the staff were so patient and gentle with him. Within a week he had his first glasses and is doing so much better at school!"</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">D</div>
+              <div>
+                <strong>David K.</strong>
+                <span>Parent</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"The online appointment system is so convenient. The eye test was detailed, and I walked out with my new contact lens prescription the same day. Excellent experience!"</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">A</div>
+              <div>
+                <strong>Aisha R.</strong>
+                <span>Graphic Designer</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="testimonial-dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="dot active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REGISTRATION / BOOK ===================== -->
+    <section class="register section section-alt" id="register" aria-labelledby="register-heading">
+      <div class="container">
+        <div class="register-grid">
+          <div class="register-content">
+            <div class="section-tag">Get Started</div>
+            <h2 class="section-title" id="register-heading">Book Your <span class="accent">Appointment</span></h2>
+            <p class="section-text">Fill in the form and our team will confirm your appointment within 24 hours. Walk-ins are also welcome during opening hours.</p>
+            <div class="register-info">
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">📅</span>
+                <div>
+                  <strong>Opening Hours</strong>
+                  <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+1 (800) FIRSTVISION</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <span>hello@firstvisionclinic.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="register-form-wrap">
+            <form class="register-form" id="register-form" novalidate aria-label="Appointment booking form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="first-name" name="first-name" placeholder="John" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="last-name" name="last-name" placeholder="Doe" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required autocomplete="tel" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" id="dob" name="dob" autocomplete="bday" />
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Required <span class="required" aria-hidden="true">*</span></label>
+                  <select id="service" name="service" required>
+                    <option value="" disabled selected>Select service…</option>
+                    <option value="eye-test">Eye Testing</option>
+                    <option value="routine-checkup">Routine Checkup</option>
+                    <option value="paediatric">Paediatric Eye Care</option>
+                    <option value="contact-lens">Contact Lens Fitting</option>
+                    <option value="diabetic">Diabetic Eye Screening</option>
+                    <option value="eyewear">Eyewear & Prescriptions</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="preferred-date">Preferred Appointment Date</label>
+                <input type="date" id="preferred-date" name="preferred-date" />
+              </div>
+              <div class="form-group">
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" rows="3" placeholder="Any specific concerns or existing conditions…"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                <span class="btn-text">Book Appointment</span>
+                <span class="btn-loader" aria-hidden="true"></span>
+              </button>
+              <p class="form-privacy">🔒 Your information is kept strictly confidential.</p>
+            </form>
+            <div class="form-success" id="form-success" aria-live="polite" hidden>
+              <div class="success-icon" aria-hidden="true">✓</div>
+              <h3>Appointment Request Sent!</h3>
+              <p>Thank you, we'll confirm your appointment within 24 hours. Check your email for confirmation details.</p>
+              <button class="btn btn-primary" id="form-reset">Book Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Find Us</div>
+          <h2 class="section-title" id="contact-heading">Visit <span class="accent">Firstvision</span></h2>
+          <p class="section-subtitle">We're centrally located and easy to reach. Walk-ins welcome during opening hours.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <address>
+              <div class="contact-card">
+                <span class="contact-card-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <span>123 Vision Avenue, Eye District<br />Your City, State 00000</span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="contact-card-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+18003478784">+1 (800) FIRSTVISION</a>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="contact-card-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@firstvisionclinic.com">hello@firstvisionclinic.com</a>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="contact-card-icon" aria-hidden="true">🕐</span>
+                <div>
+                  <strong>Opening Hours</strong>
+                  <span>Mon – Fri: 8:00 AM – 6:00 PM<br />Saturday: 9:00 AM – 4:00 PM<br />Sunday: Closed</span>
+                </div>
+              </div>
+            </address>
+          </div>
+          <div class="contact-map" aria-label="Clinic location map">
+            <div class="map-placeholder">
+              <div class="map-inner">
+                <div class="map-pin" aria-hidden="true">
+                  <svg viewBox="0 0 40 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 0C9 0 0 9 0 20C0 35 20 56 20 56C20 56 40 35 40 20C40 9 31 0 20 0Z" fill="#FF6B00"/>
+                    <circle cx="20" cy="20" r="8" fill="white"/>
+                  </svg>
+                </div>
+                <p><strong>Firstvision Eye Care Clinic</strong></p>
+                <p class="map-address">123 Vision Avenue, Your City</p>
+                <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm" aria-label="Open in Google Maps">Get Directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <h2 class="section-title">Our Doctors</h2>
-      <div class="doctors-grid">
-        <div class="doctor-card tilt">
-          <img src="https://via.placeholder.com/120" alt="Dr. Smith">
-          <h4>Dr. John Smith</h4>
-          <p>Cardiologist | Mon-Fri | 10am-4pm</p>
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Firstvision Home">
+            <div class="logo-icon">
+              <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <ellipse cx="20" cy="14" rx="19" ry="13" stroke="#FF6B00" stroke-width="2.5"/>
+                <circle cx="20" cy="14" r="6" fill="#FF6B00"/>
+                <circle cx="20" cy="14" r="3" fill="#fff"/>
+                <circle cx="22" cy="12" r="1" fill="#FF6B00"/>
+              </svg>
+            </div>
+            <span class="logo-text">First<span class="logo-accent">Vision</span></span>
+          </a>
+          <p class="footer-tagline">Your Vision, Our Priority. Delivering compassionate, expert eye care since 2005.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="doctor-card tilt">
-          <img src="https://via.placeholder.com/120" alt="Dr. Jane Doe">
-          <h4>Dr. Jane Doe</h4>
-          <p>Dermatologist | Tue-Sat | 11am-5pm</p>
+        <!-- Quick Links -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h3>Quick Links</h3>
+          <ul role="list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#eye-testing">Eye Testing</a></li>
+            <li><a href="#checkups">Routine Checkups</a></li>
+            <li><a href="#register">Book Appointment</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- Services -->
+        <div class="footer-services">
+          <h3>Our Services</h3>
+          <ul role="list">
+            <li>Eye Testing</li>
+            <li>Routine Checkups</li>
+            <li>Paediatric Eye Care</li>
+            <li>Contact Lens Fitting</li>
+            <li>Eyewear & Prescriptions</li>
+            <li>Diabetic Eye Screening</li>
+          </ul>
         </div>
-        <div class="doctor-card tilt">
-          <img src="https://via.placeholder.com/120" alt="Dr. Mike Lee">
-          <h4>Dr. Mike Lee</h4>
-          <p>Pediatrician | Mon-Fri | 9am-3pm</p>
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h3>Stay Informed</h3>
+          <p>Get eye health tips and clinic news in your inbox.</p>
+          <form class="newsletter-form" aria-label="Newsletter sign-up" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input type="email" id="newsletter-email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address for newsletter" />
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Firstvision Eye Care Clinic. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section light-section">
-    <div class="container">
-      <h2 class="section-title">Clinic Services</h2>
-      <div class="services-grid">
-        <div class="service-card tilt">
-          <h3>General Checkup</h3>
-          <p>Comprehensive health evaluations for all age groups.</p>
-        </div>
-        <div class="service-card tilt">
-          <h3>Pediatrics</h3>
-          <p>Specialized care for children and infants.</p>
-        </div>
-        <div class="service-card tilt">
-          <h3>Dermatology</h3>
-          <p>Skin health, acne treatment, and cosmetic dermatology.</p>
-        </div>
-        <div class="service-card tilt">
-          <h3>Cardiology</h3>
-          <p>Heart care, diagnostics, and advanced treatments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Section -->
-  <section id="booking" class="section">
-    <div class="container">
-      <h2 class="section-title">Book an Appointment</h2>
-      <form id="bookingForm" class="booking-form">
-        <input type="text" id="patientName" placeholder="Full Name" required>
-        <input type="email" id="patientEmail" placeholder="Email Address" required>
-        <input type="text" id="patientPhone" placeholder="Phone Number" required>
-        <select id="doctorSelect" required>
-          <option value="">Select Doctor</option>
-          <option value="Dr. John Smith">Dr. John Smith</option>
-          <option value="Dr. Jane Doe">Dr. Jane Doe</option>
-          <option value="Dr. Mike Lee">Dr. Mike Lee</option>
-        </select>
-        <input type="date" id="appointmentDate" required>
-        <textarea id="notes" placeholder="Additional Notes"></textarea>
-        <button type="submit">Book Now</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 HealthyCare Clinic. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
   <script src="script.js"></script>
 </body>
-
 </html>
