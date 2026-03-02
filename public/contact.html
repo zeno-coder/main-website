@@ -2,90 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Contact | ZenoX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-
-    <!-- Prevent Flash -->
-    <script>
-      (function() {
-        const saved = localStorage.getItem("site-theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = saved ? saved : (prefersDark ? "dark" : "light");
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
 </head>
+<body>
 
-<body class="page-fade">
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">ZENOX</a>
+        </div>
+    </nav>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <h1 class="logo">Contact Us</h1>
-        <button id="themeToggle" class="theme-btn">🌙</button>
-    </header>
-
-    <section class="contact-section">
-        <h2 class="section-title">Choose a Contact Method</h2>
-
-        <div class="contact-buttons">
-
-            <a class="contact-btn2 pulse" href="https://wa.me/919496636231" target="_blank">
-                📞 WhatsApp
-            </a>
-
-            <a class="contact-btn2 pulse" href="https://www.instagram.com/lynx_r_r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==_" target="_blank">
-                📸 Instagram
-            </a>
-
-            <a class="contact-btn2 pulse" href="mailtozeno35920@gmail.com">
-                ✉️ Email
-            </a>
-
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="contact-title">Let’s Build The Future</h1>
+            <p class="contact-subtitle">
+                Tell us about your vision. We’ll turn it into reality.
+            </p>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Contact Form Section -->
+    <section id="email-section" class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-box">
+                <form id="contactForm">
+    <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+    </div>
 
-    <!-- Fade-in -->
-    <script>
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-    </script>
+    <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+    </div>
 
-    <!-- Fade-out only for internal links -->
-    <script>
-    document.querySelectorAll("a[href]").forEach(link => {
-      const url = link.getAttribute("href");
+    <div class="form-group">
+        <input type="text" id="project" placeholder="Project Type">
+    </div>
 
-      if (!url) return;
-      if (url.startsWith("#")) return;
-      if (url.startsWith("mailto:")) return;
-      if (url.startsWith("tel:")) return;
-      if (link.target === "_blank") return; 
+    <div class="form-group">
+        <textarea id="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+    </div>
 
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        document.body.classList.remove("loaded");
-        setTimeout(() => {
-          window.location.href = url;
-        }, 300);
-      });
-    });
-    </script>
+    <button type="submit" class="contact-btn">Send Message</button>
+</form>
+            </div>
+        </div>
+    </section>
+    <section class="contact-direct">
+    <div class="container">
+        <div class="contact-direct-grid">
 
+            <!-- Email Card -->
+<a href="javascript:void(0)" id="emailCard" class="contact-card">
+    <h3>Email Us</h3>
+    <p>zeno35920@gmail.com</p>
+</a>
+
+            <!-- Instagram Card -->
+            <a href="https://instagram.com/lynx_r_r" target="_blank" class="contact-card">
+                <h3>Instagram</h3>
+                <p>@lynx_r_r</p>
+            </a>
+
+        </div>
+    </div>
+</section>
 <script>
-window.addEventListener("pageshow", (event) => {
-  // If page is restored from bfcache, force fade-in
-  if (event.persisted) {
-    document.body.classList.add("loaded");
-  }
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var project = document.getElementById("project").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappMessage = 
+        "🚀 *New Project Inquiry - ZENOX* %0A%0A" +
+        "*Name:* " + name + "%0A" +
+        "*Email:* " + email + "%0A" +
+        "*Project Type:* " + project + "%0A%0A" +
+        "*Message:* %0A" + message;
+
+    var whatsappURL = "https://wa.me/919496636231?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
 });
 </script>
+<script>
+document.getElementById("emailCard").addEventListener("click", function() {
+    const section = document.getElementById("email-section");
+    const nameInput = document.getElementById("name");
 
+    // Smooth scroll
+    section.scrollIntoView({ behavior: "smooth" });
 
+    // Focus name input and glow effect after scroll
+    setTimeout(() => {
+        nameInput.focus();
+        section.classList.add("highlight-section");
+
+        setTimeout(() => {
+            section.classList.remove("highlight-section");
+        }, 1500);
+    }, 600);
+});
+</script>
 </body>
 </html>

@@ -388,6 +388,8 @@ section {
 }
 
 .contact-btn {
+    display: inline-block;
+    text-decoration: none;
     background: var(--accent-color);
     color: var(--bg-color);
     border: none;
@@ -507,4 +509,112 @@ section {
     .contact-box h2 {
         font-size: 2rem;
     }
+}
+/* Contact Hero */
+.contact-hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 1px var(--text-primary);
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.contact-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* Contact Form */
+.contact-form-section {
+    padding-bottom: 120px;
+}
+
+.contact-form-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 4rem 3rem;
+    transition: var(--transition);
+}
+
+.contact-form-box:hover {
+    border-color: var(--accent-color);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom: 1px solid var(--accent-color);
+}
+/* Direct Contact Section */
+.contact-direct {
+    padding-bottom: 120px;
+}
+
+.contact-direct-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.contact-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.contact-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+.highlight-section .contact-form-box {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 30px rgba(255,255,255,0.15);
+    transition: var(--transition);
 }
