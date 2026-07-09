@@ -1,8 +1,5 @@
-// script.js — persistent theme toggle + fade animation
-
 const THEME_KEY = "site-theme";
 const toggle = document.getElementById("themeToggle");
-
 function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark");
@@ -67,11 +64,6 @@ window.addEventListener("storage", (e) => {
     }
 });
 
-// -----------------------------
-// Lightbox / Full Image Preview
-// -----------------------------
-
-// Open Lightbox
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const img = document.getElementById('lightbox-img');
@@ -94,7 +86,6 @@ function closeLightbox() {
   }, 400);
 }
 
-// Close lightbox if user clicks outside the image
 document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target.id === 'lightbox') closeLightbox();
 });

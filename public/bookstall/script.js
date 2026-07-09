@@ -1,12 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   APOORVA GRANDHA – script.js
-   Handles: navbar scroll/active, mobile menu, scroll reveal,
-            back-to-top button, contact form, year stamp
-═══════════════════════════════════════════════════════════ */
-
 'use strict';
-
-// ── DOM REFERENCES ─────────────────────────────────────
 const header = document.getElementById('header');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -15,29 +7,19 @@ const backToTop = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
 const formFeedback = document.getElementById('formFeedback');
 const yearEl = document.getElementById('year');
-
-// ── YEAR STAMP ─────────────────────────────────────────
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// ── SCROLL EVENTS ──────────────────────────────────────
 function onScroll() {
     const scrollY = window.scrollY;
-
-    // Sticky header shadow
     if (scrollY > 60) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
-
-    // Back-to-top visibility
     if (scrollY > 400) {
         backToTop.classList.add('visible');
     } else {
         backToTop.classList.remove('visible');
     }
-
-    // Active nav link highlighting
     let current = '';
     document.querySelectorAll('section[id], div[id="home"]').forEach(section => {
         const sectionTop = section.offsetTop - 120;
@@ -52,16 +34,13 @@ function onScroll() {
 }
 
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll(); // run once on load
-
-// ── MOBILE NAV TOGGLE ──────────────────────────────────
+onScroll(); 
 navToggle.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', isOpen.toString());
     document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-// Close menu after clicking a link (mobile)
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -70,14 +49,11 @@ navLinks.forEach(link => {
     });
 });
 
-// ── SCROLL REVEAL ──────────────────────────────────────
 const revealElements = document.querySelectorAll('[data-reveal]');
-
 const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry, idx) => {
             if (entry.isIntersecting) {
-                // Stagger cards within the same parent grid
                 const siblings = Array.from(entry.target.parentElement.querySelectorAll('[data-reveal]'));
                 const delay = siblings.indexOf(entry.target) * 80;
                 setTimeout(() => {
@@ -91,14 +67,11 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealElements.forEach(el => revealObserver.observe(el));
-
-// ── LAZY LOAD IMAGES ───────────────────────────────────
 if ('loading' in HTMLImageElement.prototype) {
     document.querySelectorAll('img[loading="lazy"]').forEach(img => {
         if (img.dataset.src) img.src = img.dataset.src;
     });
 } else {
-    // Fallback: load lazily via IntersectionObserver
     const lazyImages = document.querySelectorAll('img[data-src]');
     const imgObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -111,17 +84,12 @@ if ('loading' in HTMLImageElement.prototype) {
     });
     lazyImages.forEach(img => imgObserver.observe(img));
 }
-
-// ── CONTACT FORM ───────────────────────────────────────
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
         const name = this.querySelector('#name').value.trim();
         const email = this.querySelector('#email').value.trim();
         const message = this.querySelector('#message').value.trim();
-
-        // Basic validation
         if (!name || !email || !message) {
             setFeedback('Please fill in all required fields.', 'error');
             return;
@@ -130,12 +98,9 @@ if (contactForm) {
             setFeedback('Please enter a valid email address.', 'error');
             return;
         }
-
-        // Simulate successful submission
         const submitBtn = this.querySelector('button[type="submit"]');
         submitBtn.textContent = 'Dispatching…';
         submitBtn.disabled = true;
-
         setTimeout(() => {
             setFeedback(
                 `✦ Your scroll has been dispatched, ${name}! We shall respond with haste. ✦`,
@@ -154,8 +119,6 @@ function setFeedback(msg, type) {
         ? 'var(--clr-gold-light)'
         : 'var(--clr-red-ancient)';
 }
-
-// ── DECORATIVE DUST PARTICLES ──────────────────────────
 (function createDustParticles() {
     const container = document.querySelector('.dust-overlay');
     if (!container) return;
@@ -194,8 +157,6 @@ function setFeedback(msg, type) {
         return (Math.random() * n * 2 - n).toFixed(1);
     }
 })();
-
-// ── SMOOTH ANCHOR CLICKS ───────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));

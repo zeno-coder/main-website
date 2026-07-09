@@ -1,8 +1,5 @@
-// script.js — persistent theme toggle + fade animation
-
 const THEME_KEY = "site-theme";
 const toggle = document.getElementById("themeToggle");
-
 function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark");
@@ -73,8 +70,6 @@ window.addEventListener("storage", (e) => {
         applyTheme(newTheme);
     }
 });
-
-// ===== Admin console access =====
 window.enableAdmin = function (secret) {
   fetch("/admin/enable", {
     method: "POST",
@@ -91,7 +86,6 @@ window.enableAdmin = function (secret) {
       }
     });
 };
-// Premium Lightbox
 document.addEventListener("DOMContentLoaded", () => {
 
     const lightbox = document.getElementById("lightbox");

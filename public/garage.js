@@ -1,13 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Select DOM elements
     const navbar = document.querySelector('.navbar');
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
     const stats = document.querySelectorAll('.stat-number');
-
-    // Navbar Scroll Effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -15,22 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
-
-    // Mobile Menu Toggle
     mobileBtn.addEventListener('click', () => {
         mobileBtn.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
-
-    // Close mobile menu when clicking a link
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             mobileBtn.classList.remove('active');
             navLinks.classList.remove('active');
         });
     });
-
-    // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -47,27 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Number Counter Animation
-    let started = false; // Function started ? No
-
+    let started = false; 
     function startCount(el) {
         const goal = parseInt(el.dataset.target);
         let count = 0;
-        // Adjust interval based on goal to sync completion
         const speed = 2000 / goal;
-
         const timer = setInterval(() => {
-            count += 1 + Math.floor(goal / 100); // Increment
+            count += 1 + Math.floor(goal / 100); 
             if (count >= goal) {
                 el.innerText = goal + "+";
                 clearInterval(timer);
             } else {
                 el.innerText = count;
             }
-        }, 20); // standard interval
+        }, 20); 
     }
 
-    // Intersection Observer for Animations and Stats
     const observerOptions = {
         root: null,
         rootMargin: '0px',

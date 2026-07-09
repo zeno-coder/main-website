@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Sticky Navbar Glass Effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -30,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Animate on Scroll (Intersection Observer) ---
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -40,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-
-                // If the observing element is the stats section, trigger counter
                 if (entry.target.querySelector('.stat-number')) {
                     startCounters(entry.target);
                 }
@@ -50,14 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
-
-    // Observe all elements with animation classes
     document.querySelectorAll('.scroll-reveal, .fade-in-up').forEach(el => {
-        // Simple trick to trigger animation for elements already in view on load
         observer.observe(el);
     });
 
-    // Trigger hero animations on load
     setTimeout(() => {
         document.querySelectorAll('.hero .fade-in-up').forEach(el => {
             el.classList.add('visible');
@@ -65,14 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 
 
-    // --- Number Counter Animation ---
     function startCounters(section) {
         const counters = section.querySelectorAll('.stat-number');
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
             const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60fps
-
+            const increment = target / (duration / 16); 
             let current = 0;
             const updateCounter = () => {
                 current += increment;
@@ -88,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- Form Handling ---
     const form = document.getElementById('booking-form');
     const formStatus = document.getElementById('form-status');
 
@@ -97,21 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
-
-            // Simulate loading
             btn.innerText = 'Processing...';
             btn.disabled = true;
             btn.style.opacity = '0.7';
 
             setTimeout(() => {
                 btn.innerText = 'Booked Successfully!';
-                btn.style.backgroundColor = '#10B981'; // Green success color
+                btn.style.backgroundColor = '#10B981'; 
                 btn.style.borderColor = '#10B981';
                 formStatus.innerText = "Thank you! We'll call to confirm your appointment shortly.";
                 formStatus.style.color = '#10B981';
                 form.reset();
-
-                // Reset button after 3 seconds
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.disabled = false;
